@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 1rem;
+  height: 100vh;
+}
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+textarea {
+  resize: none;
+  padding: 0.5em;
+}
+
+button {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+textarea {
+  width: 600px;
+  height: 400px;
+  border-radius: 2rem 2rem 1rem 1rem;
+  border: 15px solid #000;
+  background-color: #000;
+  padding: 2rem;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #21f838;
+  transform: perspective(650px) rotateX(11deg);
+}
+textarea::-webkit-scrollbar {
+  display: none;
+}
+textarea:disabled {
+  background-color: #191919;
+  color: #191919;
+}
+/* textarea animation */
+.power-is-on {
+  -webkit-animation: flicker-3 2.5s linear reverse;
+  animation: flicker-3 2.5s linear reverse;
+}
+
+@-webkit-keyframes flicker-3 {
+  0%,
+  100% {
+    background-color: #21f838;
+  }
+  32.98% {
+    background-color: #21f838;
+  }
+  33% {
+    background-color: #000;
+  }
+  34% {
+    background-color: #000;
+  }
+  34.02% {
+    background-color: #21f838;
+  }
+  34.98% {
+    background-color: #21f838;
+  }
+  35% {
+    background-color: #000;
+  }
+  35.9% {
+    background-color: #000;
+  }
+  35.92% {
+    background-color: #21f838;
+  }
+  38.98% {
+    background-color: #21f838;
+  }
+  39% {
+    background-color: #000;
+  }
+  39.8% {
+    background-color: #000;
+  }
+  39.82% {
+    background-color: #21f838;
+  }
+  83.98% {
+    background-color: #21f838;
+  }
+  84% {
+    background-color: #000;
+  }
+  84.9% {
+    background-color: #000;
+  }
+  84.92% {
+    background-color: #21f838;
+  }
+}
+@keyframes flicker-3 {
+  0%,
+  100% {
+    background-color: #21f838;
+  }
+  32.98% {
+    background-color: #21f838;
+  }
+  33% {
+    background-color: #000;
+  }
+  34% {
+    background-color: #000;
+  }
+  34.02% {
+    background-color: #21f838;
+  }
+  34.98% {
+    background-color: #21f838;
+  }
+  35% {
+    background-color: #000;
+  }
+  35.9% {
+    background-color: #000;
+  }
+  35.92% {
+    background-color: #21f838;
+  }
+  38.98% {
+    background-color: #21f838;
+  }
+  39% {
+    background-color: #000;
+  }
+  39.8% {
+    background-color: #000;
+  }
+  39.82% {
+    background-color: #21f838;
+  }
+  83.98% {
+    background-color: #21f838;
+  }
+  84% {
+    background-color: #000;
+  }
+  84.9% {
+    background-color: #000;
+  }
+  84.92% {
+    background-color: #21f838;
+  }
+}
+
+.bottom {
+  width: 720px;
+  height: 300px;
+  margin: -70px 0 0 0;
+  background-color: #191919;
+  color: aliceblue;
+  border-radius: 1rem 1rem 2rem 2rem;
+  border: 15px solid #000;
+  transform: perspective(650px) rotateX(45deg);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(100, 1fr);
+  grid-template-rows: repeat(100, 1fr);
+  box-shadow: 0 12px 5px 1px #000;
+}
+.bottom .time {
+  grid-column: 15 / 21;
+  grid-row: 10;
+  font-size: 3rem;
+  text-align: center;
+}
+.add-time {
+  grid-column: 5 /20;
+  grid-row: 90;
+  font-size: 1.5rem;
+  text-align: center;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+input:focus,
+button:focus {
+  outline: 2px solid #21f838;
+}
+.bottom .start-btn {
+  grid-column: 40 / 70;
+  grid-row: 90;
+}
+.bottom .words {
+  grid-column: 85 / 95;
+  grid-row: 10;
+  font-size: 3rem;
+  text-align: center;
+}
+
+/* power btn */
+.power-btn {
+  grid-column: 96;
+  grid-row: 90;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #191919;
+  color: #21f838;
+}
+.power-btn:focus {
+  outline: none;
+}
